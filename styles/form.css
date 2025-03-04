@@ -1,0 +1,99 @@
+/* Заголовок формы */
+form h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+input[type="file"][multiple] {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.dropzone {
+    border: 2px dashed #4CAF50;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+}
+.dropzone .dz-message {
+    font-size: 16px;
+    color: #333;
+}
+
+
+/* Группа ввода */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #434141;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #fff;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #4CAF50;
+    outline: none;
+    background-color: #f9f9f9;
+}
+
+/* Кнопка отправки */
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Статус формы */
+#status {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+}
+
+/* QR-код */
+#qrImage {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#qrImage img {
+    max-width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,85 @@
+/* Общие стили кнопок */
+button {
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button.primary {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button.primary:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+button.primary:active {
+    background-color: #3e8e41;
+    transform: translateY(0);
+}
+
+/* Кнопки главной панели */
+.icon-button {
+    display: inline-flex; /* Размещаем иконку и текст рядом */
+    align-items: center; /* Вертикальное выравнивание содержимого */
+    justify-content: center; /* Горизонтальное выравнивание содержимого */
+    text-align: center; /* Центрирование текста */
+    background-color: #4CAF50; /* Зелёный фон */
+    color: white; /* Белый текст */
+    border: none; /* Убираем рамку */
+    padding: 10px 20px; /* Внутренние отступы */
+    border-radius: 5px; /* Скруглённые углы */
+    font-size: 16px; /* Размер текста */
+    font-weight: bold; /* Жирный текст */
+    cursor: pointer; /* Указатель при наведении */
+    text-decoration: none; /* Убираем подчеркивание */
+    margin: 8px; /* Расстояние между кнопками */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s; /* Плавные переходы */
+}
+
+/* Иконки в кнопках */
+.icon-button i {
+    margin-right: 10px; /* Отступ справа от иконки */
+    font-size: 18px; /* Размер иконки */
+}
+
+/* Эффект при наведении */
+.icon-button:hover {
+    background-color: #34495E; /* Чуть более светлый оттенок графитового */
+    transform: translateY(-2px); /* Легкий подъём кнопки */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Тень */
+}
+
+/* Состояние нажатия */
+.icon-button:active {
+    background-color: #1A242F; /* Более тёмный цвет */
+    transform: translateY(1px); /* Эффект нажатия */
+}
+
+/* Отключенные кнопки */
+button:disabled {
+    background-color: #BDC3C7; /* Серый цвет для отключённой кнопки */
+    color: #7F8C8D; /* Блеклый текст */
+    cursor: not-allowed; /* Указатель отключён */
+}
+/* Стили кнопок для разных функций */
+.button-receipt {
+    background-color: #3498db; /* Синий для "Приёмка" */
+}
+.button-processing {
+    background-color: #e67e22; /* Оранжевый для "Обработка" */
+}
+.button-table {
+    background-color: #9b59b6; /* Фиолетовый для "Таблица" */
+}
+.button-chart {
+    background-color: #f1c40f; /* Жёлтый для "График" */
+}
+.button-statistics {
+    background-color: #2ecc71; /* Зелёный для "Статистика" */
+}

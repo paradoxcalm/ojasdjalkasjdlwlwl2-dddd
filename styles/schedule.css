@@ -1,0 +1,81 @@
+/* Контейнер расписания */
+#scheduleSection {
+    width: 100%;
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Заголовок */
+#scheduleSection .section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Стили для таблицы */
+.schedule-table {
+    width: 100%;
+    table-layout: fixed;  /* Фиксированная ширина столбцов */
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Шапка таблицы */
+.schedule-table th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    border: 1px solid #ddd;
+    width: 14.28%; /* Равномерное распределение 7 столбцов */
+}
+
+/* Ячейки таблицы */
+.schedule-table td {
+    border: 1px solid #ddd;
+    padding: 20px;
+    height: 100px; /* Фиксированная высота ячеек */
+    width: 14.28%; /* Все столбцы равны */
+    vertical-align: middle; /* Выравнивание содержимого по центру */
+}
+
+/* Кнопки смены недели */
+.schedule-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.schedule-controls button {
+    padding: 10px 15px;
+    font-size: 14px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.schedule-controls button:hover {
+    background-color: #45a049;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .schedule-table th, .schedule-table td {
+        font-size: 14px;
+        padding: 10px;
+        height: 80px;
+    }
+
+    .schedule-controls button {
+        font-size: 12px;
+        padding: 8px;
+    }
+}

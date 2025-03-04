@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-image: url('../background/ideal2.jpg'); /* Подключаем фон */
+    background-size: cover; /* Масштабируем изображение */
+    background-position: center; /* Центрируем фон */
+    background-repeat: no-repeat; /* Избегаем повторения */
+    background-attachment: fixed; /* Фиксируем фон */
+    color: #333;
+    line-height: 1.6;
+    overflow-y: scroll;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    margin: 0;
+}
+
+p {
+    margin: 0 0 1em;
+}
+
+.dynamic-content {
+    max-width: 600px; /* Максимальная ширина */
+    height: 80vh; /* Высота равна 80% высоты окна */
+    margin: 0 auto; /* Центрирование */
+    padding: 20px; /* Отступы внутри контейнера */
+    box-sizing: border-box; /* Учитываем padding в ширине и высоте */
+    background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный фон */
+    border-radius: 10px; /* Скругленные углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    overflow-y: auto; /* Прокрутка по вертикали */
+    overflow-x: hidden; /* Отключение горизонтальной прокрутки */
+}
+
+
+.section-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Расстояние между элементами */
+}
+
+.section-container h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%; /* Занимает всю ширину контейнера */
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .dynamic-content {
+        max-width: 90%; /* Для маленьких экранов делаем ширину 90% экрана */
+        padding: 15px;
+    }
+
+    .section-container h1 {
+        font-size: 20px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    button[type="submit"] {
+        padding: 12px;
+        font-size: 14px;
+    }
+}

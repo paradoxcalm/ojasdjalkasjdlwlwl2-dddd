@@ -1,0 +1,55 @@
+/* Адаптивность для экранов шириной до 768px */
+@media (max-width: 768px) {
+    .section-container {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .main-panel {
+        padding: 15px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    table th,
+    table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+
+/* Адаптивность для экранов шириной до 480px */
+@media (max-width: 480px) {
+    .section-container {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .main-panel h1 {
+        font-size: 20px;
+    }
+
+    button {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+
+    table th,
+    table td {
+        font-size: 10px;
+        padding: 6px;
+    }
+
+    .navigation {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navigation button {
+        width: 100%;
+        max-width: 300px;
+    }
+}

@@ -1,0 +1,173 @@
+/* layout.css */
+
+/* Главная панель */
+.main-panel { /* Белый фон для главной панели */
+    padding: 20px; /* Внутренний отступ внутри панели */
+    width: 100%; /* Панель занимает всю ширину экрана */
+    max-width: 1200px; /* Максимальная ширина панели для больших экранов */
+    margin: 0 auto; /* Центрирование панели по горизонтали */
+    display: flex; /* Использование flexbox для выравнивания содержимого */
+    flex-direction: column; /* Выравнивание элементов панели в столбец */
+    align-items: center; /* Центрирование элементов по горизонтали */
+    position: sticky; /* Фиксированное положение панели при прокрутке */
+    top: 0; /* Панель закреплена в верхней части экрана */
+    z-index: 100; /* Установка слоя для перекрытия других элементов */
+    border-radius: 10px;
+}
+
+/* Блок для кнопок */
+/* Стиль заголовка */
+.section-title {
+    font-size: 28px;            /* Крупный размер шрифта */
+    color: #2c3e50;             /* Тёмно-синий оттенок */
+    text-align: center;         /* Выравнивание по центру */
+    margin-bottom: 20px;        /* Отступ снизу */
+    text-transform: uppercase;  /* Преобразовать текст в верхний регистр */
+    letter-spacing: 1.5px;      /* Расстояние между буквами */
+    font-weight: 700;           /* Более жирный шрифт */
+    position: relative;
+}
+
+/* Можно добавить декоративную линию под заголовком (по желанию) */
+.section-title::after {
+    content: "";
+    display: block;
+    width: 60px;                /* Длина декоративной линии */
+    height: 3px;                /* Толщина */
+    background-color: #4CAF50;  /* Цвет линии (зелёный) */
+    margin: 8px auto 0 auto;    /* Центрируем */
+    border-radius: 2px;
+}
+
+/* Контейнер с кнопками-фильтрами */
+.filter-container {
+    display: flex;              /* Гибкий контейнер */
+    justify-content: center;    /* Центрируем по горизонтали */
+    align-items: center;        /* Выравниваем по вертикали */
+    gap: 10px;                  /* Расстояние между кнопками */
+    
+    /* Размер и положение */
+    width: fit-content;         /* Ширина по содержимому (или можно задать фиксированную ширину) */
+    margin: 0 auto 20px auto;   /* Центрируем по горизонтали, добавляем отступ снизу */
+    padding: 10px 20px;         /* Внутренние отступы */
+    
+    /* Внешний вид */
+   
+    border-radius: 8px;         /* Скруглённые углы */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+}
+
+/* Сами кнопки фильтра */
+.filter-container button {
+    background-color: #4CAF50;  /* Основной зелёный фон */
+    color: #fff;                /* Белый текст */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Ховер-эффект */
+.filter-container button:hover {
+    background-color: #45a049;  /* Чуть более тёмный зелёный при наведении */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Эффект при нажатии (active) */
+.filter-container button:active {
+    background-color: #3a8d3f;  
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+
+/* Блок для таблицы */
+.table-container {
+    margin-top: 20px; /* Отступ сверху для разделения блоков */
+    overflow-x: auto; /* Горизонтальная прокрутка, если таблица слишком широкая */
+    padding: 10px; /* Внутренний отступ */
+    background-color: #fff; /* Белый фон */
+    border-radius: 8px; /* Скруглённые углы */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+}
+
+
+
+/* Центральный контейнер */
+.dynamic-content {
+    width: 100%; /* Контейнер занимает всю ширину родителя */
+    max-width: 600px; /* Максимальная ширина контейнера */
+    height: 800px; /* Фиксированная высота контейнера */
+    margin: 0px auto; /* Отрицательный отступ сверху для уменьшения зазора */
+    padding: 20px; /* Внутренний отступ внутри контейнера */
+    background-color: rgba(255, 255, 255, 0.75); /* Белый фон контейнера */
+    border-radius: 10px; /* Скругленные углы контейнера */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для выделения контейнера */
+    display: flex; /* Использование flexbox для управления содержимым */
+    flex-direction: column; /* Содержимое выстраивается в столбец */
+    justify-content: flex-start; /* Содержимое выравнивается сверху контейнера */
+    align-items: center; /* Центрирование содержимого по горизонтали */
+}
+
+/* Контейнер секций */
+.section-container {
+    width: 100%; /* Секционный контейнер занимает всю ширину родителя */
+    padding: 30px; /* Внутренний отступ внутри секции */
+     background-color: rgba(255, 255, 255, 0); /* Белый фон секции */
+    border-radius: 8px; /* Скругленные углы секции */
+    font-family: 'Roboto', Arial, sans-serif; /* Шрифт для текста внутри секции */
+    text-align: center; /* Центрирование текста внутри секции */
+    overflow: auto; /* Прокрутка, если содержимого больше, чем высота секции */
+}
+
+/* Заголовок в главной панели */
+.main-panel h1 {
+    font-size: 28px; /* Размер шрифта заголовка */
+    margin-bottom: 15px; /* Отступ снизу у заголовка */
+    text-align: center; /* Центрирование текста заголовка */
+    color: #333; /* Темно-серый цвет текста */
+}
+
+/* Адаптивность для планшетов */
+@media (max-width: 768px) {
+    .dynamic-content {
+        height: 700px; /* Уменьшенная высота контейнера для планшетов */
+    }
+}
+
+/* Адаптивность для телефонов */
+@media (max-width: 480px) {
+    body {
+        background: url('../background/ideal2.jpg'); /* Путь к картинке */
+        background-size: cover; /* Растягиваем фон по всему экрану */
+        background-position: center; /* Центрируем фон */
+        background-repeat: no-repeat; /* Убираем повторение */
+        background-color: rgba(0, 0, 0, 0.3); /* Прозрачный черный цвет поверх изображения */
+    }
+
+    .main-panel {
+        display: none; /* Убираем главную панель на телефонах */
+    }
+
+    .dynamic-content {
+    width: 100%; /* Контейнер занимает всю ширину родителя */
+    max-width: 600px; /* Максимальная ширина контейнера */
+    height: 800px; /* Фиксированная высота контейнера */
+    margin: -15px auto; /* Отступ сверху и снизу, центрирование по горизонтали */
+    padding: 20px; /* Внутренний отступ внутри контейнера */
+    opacity: 1;
+    border-radius: 10px; /* Скругленные углы контейнера */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для выделения контейнера */
+    display: flex; /* Использование flexbox для управления содержимым */
+    flex-direction: column; /* Содержимое выстраивается в столбец */
+    justify-content: flex-start; /* Содержимое выравнивается сверху контейнера */
+    align-items: center; /* Центрирование содержимого по горизонтали */
+}
+
+    .section-container {
+        padding: 20px; /* Уменьшаем отступы внутри секций для мобильных устройств */
+    }
+}
